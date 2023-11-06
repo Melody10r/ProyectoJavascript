@@ -1,2 +1,2 @@
 # ProyectoJavascript
-Iniciamos proyecto de Javascript que incluye HTML, css y bootstrap.
+Iniciamos proyecto de Javascript que incluye HTML, css, js y bootstrap.
