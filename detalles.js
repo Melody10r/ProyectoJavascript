@@ -1,36 +1,32 @@
 function resumir() {
-    if(1) {
-        let precio = 200;
-        let desc = 85;
-        let cien = 100;
+    let cantidadTickets = document.getElementById('cantTickets').value;
 
-        let resultado = precio * desc / cien;
-        let total = precio - resultado; 
+    let descuento = document.getElementByld('categoria').value;
+
+    console. log(typeof descuento);
+
+    if(descuento === '1') {
+        let precioTicket = 40 ;
+        let total = parseInt(cantidadTickets) * precioTicket;
         console.log(total);
-        var mostrar = document.getElementById(total);
+        document.getElementByld('total').innerHTML = total;
 
-    } else if(2) {
-        let precio1 = 200;
-        let desc1 = 50;
-        let cien = 100;
-
-        let resultado = precio1 * desc1 / cien;
-        let total2 = precio1 - resultado; 
-        console.log(total2);
-
-    }
-    else {
-        let precio2 = 200;
-        let desc2 = 15;
-        let cien = 100;
-
-        let resultado = precio2 * desc2 / cien;
-        let total3 = precio2 - resultado; 
-        console.log(total3);
-
+    } else if(descuento === "2" ) {
+        let precioTicket = 100 ;
+        let total = parseInt(cantidadTickets) * precioTicket;
+        console.log(total);
+        document.getElementByld('total').innerHTML = total;
+    } else {
+        let precioTicket = 170 ;
+        let total = parseInt(cantidadTickets) * precioTicket;
+        console.log(total);
+        document.getElementByld('total').innerHTML = total;
     }
 }
 
 function limpiar() {
-    document.getElementById("miLim").reset();
+    document.getElementById('myForm').reset();
+    document.getElementById('total').innerHTML = 0.00;
 }
+
+ 
