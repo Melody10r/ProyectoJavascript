@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TP DE JAVASCRIPT</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top  bg-dark">
+      <div class="container-fluid">
+          <a class="navbar-brand text-light" href="#">
+              <img src="#" alt="Logo" width="30" height="30" class="d-inline-block logo align-text-top">
+              Conf Bs As
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+              aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                      <a class="nav-link active text-light" aria-current="page" href="#"> La conferencia</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active text-light" aria-current="page" href="#">Las oradores</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active text-light" aria-current="page" href="#">El lugar y la fecha</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active text-light" aria-current="page" href="#">Conviertete en orador</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active text-light" aria-current="page" href="#">Comprar Ticket</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+    <h1 style="text-align:center;">VENTA DE TICKETS</h1>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card border-primary estilocard">
+            <div class="card-body">
+              <h5 class="card-title text-center">ESTUDIANTES</h5>
+              <p class="card-text text-center">Tiene un descuento del</p>
+              <p style="text-align:center;"><b>80%</b></p>
+              <p style="text-align:center;">*presentar documentacion</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-danger estilocard">
+            <div class="card-body ">
+              <h5 class="card-title text-center">TRAINEE</h5>
+              <p class="card-text text-center">Tiene un descuento del</p>
+              <p style="text-align:center;"><b>50%</b></p>
+              <p style="text-align:center;">*presentar documentacion</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-warning estilocard">
+            <div class="card-body">
+              <h5 class="card-title text-center">JUNIOR</h5>
+              <p class="card-text text-center">Tiene un descuento del</p>
+              <p style="text-align:center;"><b>15%</b></p>
+              <p style="text-align:center;">*presentar documentacion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <section>
+        <h6 style="text-align:center">VENTA</h6>
+      <h2 style="text-align:center">Valor de Ticket $200</h2>
+      </section>
+      
+      <section class="col-6  mx-auto my-4 rounded-3">
+        <!--Formulario-->
+        <br>
+      <div class="container">
+        <form id="MyForm">
+        <div class="mb-2 border-danger px-5 ">
+         
+          <label for="nombre" class="form-label"></label>
+          <input type="text" class="form-control estilotxt" id="exampleFormControlInput1" placeholder="Nombre">
+        </div>
+        <div class="mb-3 border-danger px-5">
+          <label for="apellido" class="form-label"></label>
+          <input type="text" class="form-control estiloApellido" id="apellido" placeholder="Apellido" >
+        </div>
+        <div class="mb-2 border-danger px-5 ">
+          <label for="correo" class="form-label"></label>
+          <input type="email" class="form-control estilotxtCorreo " id="correo" placeholder="Correo">
+        </div>
+        <div class="mb-3 border-danger px-5 ">
+          <label for="cant"class="form-label estiloLabel  ">Cantidad</label>
+          <input type="number" min="1"  max="5"class="form-control estilocant" id="cant" >
+        </div>
+        <label for="categoria" class="form-label estiloLabel2 ">Categoria</label>
+        <select id="desc" class="form-select estiloCategoria" aria-label="Default select example">
+          <option value="1">ESTUDIANTES</option>
+          <option value="2">TRAINEE</option>
+          <option value="3">JUNIOR</option>
+        </select>
+          <br>
+          <!--d-grid gap-2 d-md-flex justify-content-md-center (centraliza los botones)-->
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+      <button onclick="resumir()" type="button"  class="btn btn-secundary border border-primary estiloBoton">Resumen</button>
+          <button onclick="limpiar()" type="reset" class="btn btn-secundary border border-primary estiloBoton">Limpiar</button>    
+    </div>
+  </form>
+    <h3 style="background-color:antiquewhite">Total a Pagar :$
+     <span id="total">0.00</span>
+    </h3> 
+      
+      </div>
+      </section>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="css/codigo.js"></script>
+  </body>
+</html>
